@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>心动歌单</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="icon" href="./picture/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--End-->
+    <script>
+    fetch('https://v1.hitokoto.cn')
+        .then(function (res){
+        return res.json();
+        })
+        .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = data.hitokoto;
+        })
+        .catch(function (err) {
+        console.error(err);
+        })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        table, tr, td, th {
+            text-align: center;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:nth-child(2n) {
+            background-color: rgba(88, 73, 65, 0.18);
+        }
+
+        tr:hover {
+            background-color: rgb(255, 235, 149);
+        }
+
+        #tt {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<header class="site-header container animated fadeInDown">
+	<div class="header-wrapper"></div>
+    <div><h4><a href="../index.html">首页</a></h4></div>
+    <div>
+        <p class="power">© 2023 Powered By
+            <a href="https://www.oyyandwjw.xyz/" target="_blank"> NING</a>
+        </p>
+    </div>
+</header>
+<div id="menu-container">
+            <div>
+                <table>
+                    <h3>小万的心动歌单</h3>
+                    <table>
+                        <tr>
+                            <th>歌名</th>
+                            <th>歌手</th>
+                            <th>歌词</th>
+                            <th>❤代码</th>
+                        </tr>
+                        <tr>
+                            <td>告白</td>
+                            <td>Cifer</td>
+                            <td>这是通关密码，这是我的告白</td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>LOVE STORY</td>
+                            <td>Taylor Swift</td>
+                            <td>You'll be the prince and I'll be the princess</td>
+                            <td>77</td>
+                        </tr>
+                        <tr>
+                            <td>谁家</td>
+                            <td>池鱼</td>
+                            <td>月色独影 浊酒只剩一杯</td>
+                            <td>01</td>
+                        </tr>
+                        <tr>
+                            <td>02的爱恋</td>
+                            <td>约谈人参</td>
+                            <td>ダーリンのこと　大好きだよ</td>
+                            <td>02</td>
+                        </tr>
+                        <tr>
+                            <td>身骑白马</td>
+                            <td>徐佳莹</td>
+                            <td>我身骑白马 走三关</td>
+                            <td>07</td>
+                        </tr>
+                        <tr>
+                            <td>Darling</td>
+                            <td>Anas</td>
+                            <td>Can I call you darling?</td>
+                            <td>09</td>
+                        </tr>
+                        <tr>
+                            <td>晴天</td>
+                            <td>周杰伦</td>
+                            <td>刮风这天 我试过握着你手</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>복숭아</td>
+                            <td>IU</td>
+                            <td>자꾸 맘이 가네</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>Jardin</td>
+                            <td>Keren</td>
+                            <td>T'embrasser les yeux ouverts</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>半道英雄</td>
+                            <td>一叶</td>
+                            <td>胜者从来盖世英雄</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td id="tt" colspan="5">SUM：10首，心动指数：100%</td>
+                        </tr>
+                    </table>
+                </table>
+            </div>
+</div>
+
+<!-- templatemo 421 raleway -->
+<span class="border-top"></span>
+<span class="border-left"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+    <!-- 网易云音乐 -->
+    <embed frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0 src="//music.163.com/outchain/player?type=0&id=4950890732&auto=1&height=0"></embed>
+</body>
+</html>
